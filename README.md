@@ -1,3 +1,3 @@
-# portpolio
+# Portfolio
 
-HK Web front-end Portpolio.
+Holim Front-end Portfolio.
