@@ -1,0 +1,47 @@
+@import url("./reset.css");
+@import url("./global.css");
+
+/* navbar style */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pastel-light-orange);
+  align-items: center;
+  color: var(--color-pastel-blue);
+  padding: 1.2rem;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-heavy-bold);
+  margin-left: 0.75em;
+}
+.logo {
+  border-radius: 0.25em;
+  width: 3em;
+  height: 3em;
+}
+.logo__link {
+  margin-left: 0.6em;
+  color: var(--color-pastel-blue);
+}
+
+.navbar__menu {
+  display: flex;
+}
+.navbar__menu__item {
+  padding: 0.5em 0.75em;
+  margin: 0 0.25em;
+  cursor: pointer;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  border-radius: var(--size-border-radius);
+}
+.navbar__menu__item.active {
+  border: 1px solid var(--color-pastel-blue);
+}
+.navbar__menu__item:hover {
+  background-color: var(--color-pastel-pink);
+}
