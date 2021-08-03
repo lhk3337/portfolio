@@ -20,8 +20,8 @@
 }
 .logo {
   border-radius: 0.25em;
-  width: 3em;
-  height: 3em;
+  width: 2em;
+  height: 2em;
 }
 .logo__link {
   margin-left: 0.6em;
@@ -44,4 +44,29 @@
 }
 .navbar__menu__item:hover {
   background-color: var(--color-pastel-pink);
+}
+/* Home style */
+#Home {
+  background: url(../imgs/home-background.png) no-repeat center/cover;
+  padding: 2.5em;
+  text-align: center;
+}
+.home_avatar {
+  width: 15.625em;
+  height: 15.625em;
+  border-radius: 50%;
+  border: 5px solid var(--color-light-white);
+}
+.home__title,
+.home__description {
+  color: var(--color-pastel-blue);
+}
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 1.5em;
+  padding: 0.5em 0.75em;
+  border: 2px solid var(--color-pastel-blue);
+  border-radius: 4px;
+  color: var(--color-pastel-blue);
 }
