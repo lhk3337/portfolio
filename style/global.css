@@ -43,6 +43,9 @@
   /* Size */
   --size-border-radius: 0.25rem; /* 4px */
   --size-circle-radius: 50%;
+
+  /* Annimation */
+  --animation-duration: 300ms;
 }
 
 * {
