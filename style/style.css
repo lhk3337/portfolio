@@ -269,3 +269,36 @@
   transform: translateY(0px);
   border-radius: 8px;
 }
+
+/* Contact Style */
+
+#contact {
+  background-color: #ffa986;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+.contact__title {
+  margin: 22px 0;
+}
+.contact__links {
+  margin: 24px 0;
+  font-size: var(--font-medium);
+}
+.contact__links i {
+  transition: all var(--animation-duration) ease-in;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-pastel-blue);
+}
+.contact__right {
+  color: white;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-regular);
+}
