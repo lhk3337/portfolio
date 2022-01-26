@@ -10,6 +10,18 @@ document.addEventListener("scroll", () => {
   }
 });
 
+const home = document.querySelector(".home__container");
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  // console.log("window.scrollY", window.scrollY);
+  // console.log("homeHeight", homeHeight);
+  // console.log(window.scrollY / homeHeight);
+  if (window.scrollY < homeHeight) {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+  }
+});
+
 const navMenuBtn = document.querySelectorAll(".navbar__menu__item");
 
 for (let i = 0; i < navMenuBtn.length; i++) {

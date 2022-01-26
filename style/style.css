@@ -63,10 +63,10 @@
 /* Home style */
 #home {
   background: url(../imgs/home-background.png) no-repeat center/cover;
-  padding: 2.5em;
-  padding-top: 120px;
+  padding: 100px;
   text-align: center;
 }
+
 .home_avatar {
   width: 15.625em;
   height: 15.625em;
