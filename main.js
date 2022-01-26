@@ -13,12 +13,21 @@ document.addEventListener("scroll", () => {
 const navMenuBtn = document.querySelectorAll(".navbar__menu__item");
 
 for (let i = 0; i < navMenuBtn.length; i++) {
-  navMenuBtn[i].addEventListener("click", (e) => {
-    const {
-      target: {
-        dataset: { tag },
-      },
-    } = e;
-    document.querySelector(tag).scrollIntoView({ behavior: "smooth" });
+  navMenuBtn[i].addEventListener("click", (event) => {
+    scrollIntoView(event);
   });
 }
+
+const homeContactBtn = document.querySelector(".home__contact");
+homeContactBtn.addEventListener("click", (event) => {
+  scrollIntoView(event);
+});
+
+const scrollIntoView = (event) => {
+  const {
+    target: {
+      dataset: { tag },
+    },
+  } = event;
+  document.querySelector(tag).scrollIntoView({ behavior: "smooth" });
+};
