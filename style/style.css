@@ -5,12 +5,19 @@
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pastel-light-orange);
+  background-color: transparent;
   align-items: center;
   color: var(--color-pastel-blue);
+  position: fixed;
+  width: 100%;
   padding: 1.2rem;
+  transition: all var(200ms) ease-in-out;
 }
-
+#navbar.navbar--dark {
+  background-color: var(--color-pastel-light-orange);
+  padding: 8px;
+  z-index: 999;
+}
 .navbar__logo {
   display: flex;
   align-items: center;
@@ -54,9 +61,10 @@
   color: var(--color-pastel-blue);
 }
 /* Home style */
-#Home {
+#home {
   background: url(../imgs/home-background.png) no-repeat center/cover;
   padding: 2.5em;
+  padding-top: 120px;
   text-align: center;
 }
 .home_avatar {
