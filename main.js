@@ -94,17 +94,15 @@ const scrollIntoView = (event) => {
 
 // project category Count
 const category__count = document.querySelectorAll(".category__count");
-const vanillaJSCount = Array.prototype.slice
-  .call(projects)
-  .filter((project) => project.dataset.lang === "vanillaJS").length;
-const reactjsCount = Array.prototype.slice
-  .call(projects)
-  .filter((project) => project.dataset.lang === "reactjs").length;
-const reactTSCount = Array.prototype.slice
-  .call(projects)
-  .filter((project) => project.dataset.lang === "reactTS").length;
+const vanillaJSCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
+const reactjsCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
+const reactTSCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
 
 category__count[0].innerText = projects.length;
 category__count[1].innerText = vanillaJSCount;
 category__count[2].innerText = reactjsCount;
 category__count[3].innerText = reactTSCount;
+
+// console.log(Array.from(projects).filter((project) => project.dataset.lang === "reactjs")); ES6
+// console.log(Array.prototype.slice.call(projects).filter((project) => project.dataset.lang === "reactjs"));
+// console.log(projects.filter((project) => project.dataset.lang === "reactjs"));
