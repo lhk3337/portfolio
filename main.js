@@ -43,7 +43,7 @@ arrowUpBtn.addEventListener("click", () => {
 const work__categories = document.querySelector(".work__categories");
 const work__projects = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
-
+console.log(projects);
 work__categories.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter === false) {
@@ -57,7 +57,6 @@ work__categories.addEventListener("click", (e) => {
   target.classList.add("selected");
 
   work__projects.classList.add("animation");
-
   setTimeout(() => {
     projects.forEach((project) => {
       if (filter === "*" || filter === project.dataset.lang) {
@@ -92,3 +91,20 @@ const scrollIntoView = (event) => {
   } = event;
   document.querySelector(tag).scrollIntoView({ behavior: "smooth" });
 };
+
+// project category Count
+const category__count = document.querySelectorAll(".category__count");
+const vanillaJSCount = Array.prototype.slice
+  .call(projects)
+  .filter((project) => project.dataset.lang === "vanillaJS").length;
+const reactjsCount = Array.prototype.slice
+  .call(projects)
+  .filter((project) => project.dataset.lang === "reactjs").length;
+const reactTSCount = Array.prototype.slice
+  .call(projects)
+  .filter((project) => project.dataset.lang === "reactTS").length;
+
+category__count[0].innerText = projects.length;
+category__count[1].innerText = vanillaJSCount;
+category__count[2].innerText = reactjsCount;
+category__count[3].innerText = reactTSCount;
