@@ -50,6 +50,12 @@ work__categories.addEventListener("click", (e) => {
     return;
   }
 
+  ///Button selected
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
   work__projects.classList.add("animation");
 
   setTimeout(() => {
@@ -61,7 +67,7 @@ work__categories.addEventListener("click", (e) => {
       }
     });
     work__projects.classList.remove("animation");
-  }, 1000);
+  }, 200);
 });
 
 // menu bar 버튼 클릭시 항목에 자동으로 스크롤 이동
