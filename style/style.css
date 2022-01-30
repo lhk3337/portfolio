@@ -44,8 +44,8 @@
 }
 .logo {
   border-radius: var(--size-border-radius);
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
 }
 .logo__link {
   margin-left: 0.6em;
@@ -80,7 +80,7 @@
 /* Home style */
 #home {
   background: url(../imgs/home-background.png) no-repeat center/cover;
-  padding: 100px;
+  padding: 100px 50px;
   text-align: center;
 }
 
@@ -102,6 +102,11 @@
   border: 2px solid var(--color-pastel-blue);
   border-radius: var(--size-border-radius);
   color: var(--color-pastel-blue);
+}
+.home__contact:hover {
+  background-color: var(--color-pastel-pink);
+
+  color: white;
 }
 .section {
   padding: 3.125rem;
@@ -374,11 +379,17 @@
   .navbar__menu.open {
     display: block;
   }
+  .section {
+    padding: 1.125rem;
+    padding-top: 50px;
+  }
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .skillset {
     flex-direction: column;
@@ -426,5 +437,13 @@
     right: 60px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
+  }
+  .arrow__up {
+    right: 16px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px;
   }
 }
