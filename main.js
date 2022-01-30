@@ -43,7 +43,6 @@ arrowUpBtn.addEventListener("click", () => {
 const work__categories = document.querySelector(".work__categories");
 const work__projects = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
-console.log(projects);
 work__categories.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
   if (filter === false) {
@@ -74,9 +73,18 @@ const navMenuBtn = document.querySelectorAll(".navbar__menu__item");
 
 for (let i = 0; i < navMenuBtn.length; i++) {
   navMenuBtn[i].addEventListener("click", (event) => {
+    navbarMenu.classList.remove("open");
     scrollIntoView(event);
   });
 }
+
+//navbar toogle button handler responsive screen
+const navbarMenu = document.querySelector(".navbar__menu");
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
+});
 
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", (event) => {
