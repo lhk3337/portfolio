@@ -102,9 +102,9 @@ const scrollIntoView = (event) => {
 
 // project category Count
 const category__count = document.querySelectorAll(".category__count");
-const vanillaJSCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
+const vanillaJSCount = Array.from(projects).filter((project) => project.dataset.lang === "vanillaJS").length;
 const reactjsCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
-const reactTSCount = Array.from(projects).filter((project) => project.dataset.lang === "reactjs").length;
+const reactTSCount = Array.from(projects).filter((project) => project.dataset.lang === "reactTS").length;
 
 category__count[0].innerText = projects.length;
 category__count[1].innerText = vanillaJSCount;
